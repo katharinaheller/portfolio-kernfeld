@@ -10,7 +10,11 @@ menu?.addEventListener("click", () => {
   navigation?.classList.toggle("open", open);
 });
 document.addEventListener("keydown", (e) => {
-  if (e.key === "Escape") close();
+  if (e.key === "Escape") {
+    const focusWasInside = navigation?.contains(document.activeElement);
+    close();
+    if (focusWasInside) menu?.focus();
+  }
 });
 document
   .querySelectorAll<HTMLFormElement>("[data-demo-form]")

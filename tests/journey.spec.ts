@@ -1,3 +1,30 @@
-import {test,expect} from '@playwright/test';
-test('service to contact journey and validation',async({page})=>{await page.goto('./leistungen/');await page.getByRole('link',{name:'Umfang und Ablauf ansehen'}).first().click();await expect(page.locator('h1')).toContainText('Erst verstehen');await page.getByRole('link',{name:'Anfrage vorbereiten'}).click();await page.getByRole('button',{name:'Anfrage simulieren'}).click();await expect(page.locator('.form-status')).toContainText('Pflichtfelder');await page.getByLabel('Name *',{exact:true}).fill('Demo Person');await page.getByLabel('Unternehmen *').fill('Beispielbetrieb');await page.getByLabel('Geschäftliche E-Mail-Adresse').fill('demo@example.invalid');await page.getByLabel('Ihre Ausgangslage').fill('Eine fiktive Fragestellung zum Energieverbrauch.');await page.getByRole('button',{name:'Anfrage simulieren'}).click();await expect(page.locator('.form-status')).toContainText('keine Daten gespeichert oder versendet');});
-test('article has a unique heading and related path',async({page})=>{await page.goto('./fachwissen/grundlast-verstehen/');await expect(page.locator('h1')).toContainText('niemand arbeitet');await page.getByRole('link',{name:'Passende Leistungen ansehen'}).click();await expect(page.locator('h1')).toContainText('Die richtige Tiefe');});
+import { test, expect } from "@playwright/test";
+test("service to contact journey and validation", async ({ page }) => {
+  await page.goto("./leistungen/");
+  await page
+    .getByRole("link", { name: "Umfang und Ablauf ansehen" })
+    .first()
+    .click();
+  await expect(page.locator("h1")).toContainText("Erst verstehen");
+  await page.getByRole("link", { name: "Anfrage vorbereiten" }).click();
+  await page.getByRole("button", { name: "Anfrage simulieren" }).click();
+  await expect(page.locator(".form-status")).toContainText("Pflichtfelder");
+  await page.getByLabel("Name *", { exact: true }).fill("Demo Person");
+  await page.getByLabel("Unternehmen *").fill("Beispielbetrieb");
+  await page
+    .getByLabel("Geschäftliche E-Mail-Adresse")
+    .fill("demo@example.invalid");
+  await page
+    .getByLabel("Ihre Ausgangslage")
+    .fill("Eine fiktive Fragestellung zum Energieverbrauch.");
+  await page.getByRole("button", { name: "Anfrage simulieren" }).click();
+  await expect(page.locator(".form-status")).toContainText(
+    "keine Daten gespeichert oder versendet",
+  );
+});
+test("article has a unique heading and related path", async ({ page }) => {
+  await page.goto("./fachwissen/grundlast-verstehen/");
+  await expect(page.locator("h1")).toContainText("niemand arbeitet");
+  await page.getByRole("link", { name: "Passende Leistungen ansehen" }).click();
+  await expect(page.locator("h1")).toContainText("Die richtige Tiefe");
+});
