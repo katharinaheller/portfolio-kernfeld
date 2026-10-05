@@ -1,0 +1,13 @@
+{
+  "project": "KERNFELD",
+  "base": "http://127.0.0.1:4302/",
+  "production": false,
+  "time": "2026-10-05T13:49:42.299Z",
+  "routeCount": 14,
+  "linksChecked": 28,
+  "errors": [],
+  "requestErrors": [],
+  "externalRequests": [],
+  "failures": [],
+  "accessibilityViolations": []
+}

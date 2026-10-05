@@ -1,0 +1,4 @@
+---
+import Layout from '../../layouts/Layout.astro';import {articles} from '../../data/content';import {href} from '../../lib/site';
+---
+<Layout title="Fachwissen zu Energie und technischer Planung" description="Verständliche Fachbeiträge über Grundlast, Abwärmenutzung und die Priorisierung technischer Maßnahmen. Orientierung für Entscheider im Mittelstand."><section class="page-intro"><p class="eyebrow">FACHWISSEN</p><h1>Technische Themen.<br>Verständlich eingeordnet.</h1><p>Gedanken, Prüffragen und praktische Ansätze für die Energieversorgung Ihres Betriebs.</p></section><section class="section"><div class="article-grid">{articles.map((a,i)=><a class="article-card" href={href(`fachwissen/${a.slug}/`)}><div class={`article-art art-${i}`} aria-hidden="true"><span>{['↗','≈','↔'][i]}</span></div><p class="eyebrow">{a.category} · {a.read}</p><h2>{a.title}</h2><p>{a.teaser}</p><span class="card-link">Beitrag lesen →</span></a>)}</div></section></Layout>

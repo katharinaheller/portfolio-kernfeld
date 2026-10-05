@@ -1,0 +1,17 @@
+{
+  "date": "2026-10-05",
+  "rasterAssets": [
+    {
+      "name": "kernfeld",
+      "prompt": "Use case: photorealistic-natural. Architectural editorial photograph for fictional German engineering consultancy. Spacious contemporary industrial production hall, sawtooth roof with skylights, elegant clearly visible yellow-orange structural crane beam and slate-grey steel supports, neatly organized clean production machinery without any logos. Strong diagonal perspective leading to far end, daylight, sober professional photography with true textures and minimal clutter. Wide 3:2 framing. No people, no text, no trademarks, no watermark.",
+      "method": "Built-in image_gen",
+      "sourceIdentifier": "exec-b271c866-924c-469a-9e5c-ddbda3bc77c5.png",
+      "licenseNote": "Original AI-generated concept image, no third-party stock image. Not a claim of exclusive copyright. Subject to generation-service terms."
+    }
+  ],
+  "codeNativeArtwork": [
+    "Original SVG logo/favicon",
+    "Original CSS/SVG interface graphics",
+    "Original code-rendered social card"
+  ]
+}

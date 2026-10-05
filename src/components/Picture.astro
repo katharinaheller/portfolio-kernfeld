@@ -1,0 +1,6 @@
+---
+import {href} from '../lib/site';
+interface Props{alt:string;class?:string;priority?:boolean;}
+const {alt,class:className='',priority=false}=Astro.props;
+---
+<img class={className} src={href('images/industry-960.webp')} srcset={`${href('images/industry-480.webp')} 480w, ${href('images/industry-960.webp')} 960w, ${href('images/industry-1536.webp')} 1536w`} sizes="(max-width: 700px) 100vw, 60vw" width="1536" height="1024" alt={alt} loading={priority?'eager':'lazy'} fetchpriority={priority?'high':'auto'} decoding="async" />

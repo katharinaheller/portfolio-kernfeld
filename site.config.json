@@ -1,0 +1,24 @@
+{
+  "name": "KERNFELD",
+  "slug": "kernfeld",
+  "origin": "https://katharinaheller.github.io",
+  "basePath": "/portfolio-kernfeld/",
+  "routes": [
+    "",
+    "leistungen/",
+    "leistungen/energieanalyse/",
+    "leistungen/waermekonzepte/",
+    "leistungen/transformationsplanung/",
+    "ueber-uns/",
+    "projekte/",
+    "fachwissen/",
+    "fachwissen/grundlast-verstehen/",
+    "fachwissen/abwaerme-pruefen/",
+    "fachwissen/massnahmen-priorisieren/",
+    "kontakt/",
+    "impressum/",
+    "datenschutz/"
+  ],
+  "locale": "de-DE",
+  "output": "dist"
+}
